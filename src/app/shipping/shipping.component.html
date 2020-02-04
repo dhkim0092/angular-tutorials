@@ -1,0 +1,7 @@
+<h3>Shipping Prices</h3>
+
+<!-- 비동기 파이프를 사용하여 운송 유형 및 가격을 표시 -->
+<div class="shipping-item" *ngFor="let shipping of shippingCosts | async">
+  <span>{{ shipping.type }}</span>
+  <span>{{ shipping.price | currency }}</span>
+</div>
